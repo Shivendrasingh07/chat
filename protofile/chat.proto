@@ -1,0 +1,15 @@
+    syntax = "proto3";
+    import "google/protobuf/descriptor.proto";
+    package chat;
+
+    option java_package = "chat/";
+
+
+
+message Message {
+  string body = 1;
+}
+
+service ChatService {
+  rpc SayHello(Message) returns (Message){}
+}
